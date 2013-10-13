@@ -1,0 +1,9 @@
+[submodule "stuff/hict-timer"]
+	path = stuff/hict-timer
+	url = https://github.com/aeirola/hict-timer.git
+[submodule "stuff/irssi-rest-api"]
+	path = stuff/irssi-rest-api
+	url = https://github.com/aeirola/irssi-rest-api.git
+[submodule "stuff/junat-taulukossa"]
+	path = stuff/junat-taulukossa
+	url = https://github.com/aeirola/junat-taulukossa.git
