@@ -1,0 +1,128 @@
+/* Page styles */
+html {margin:0; padding:0;
+    height:100%;
+}
+body {
+    background: black;
+    width: 100%;
+    margin: 0;
+}
+body.right {
+    width: 80%;
+    text-align: right;
+}
+body.center {
+    width: 100%;
+    text-align: center;
+    margin:0; padding:0;
+  	height:100%;
+}
+
+/* General stuff */
+h1 {
+    font-family: arial, verdana, sans-serif; 
+    font-size: 48pt;
+    color: gray;
+    letter-spacing: 3px;
+    text-align: right;
+    float: right;
+
+    border-bottom: gray 2px solid; 
+    padding: 0;
+    margin-left: 40%;
+    margin-top: 30%;
+    margin-bottom: 10pt;
+    width: 60%;
+    line-height: 45pt;
+}
+
+
+p, a, ul, dl {
+    font-family: arial, verdana, sans-serif;
+    color: #FFF;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+p.back, p.back a {
+    font-size:10pt;
+    margin-bottom:5;
+    padding:0;
+}
+
+p.back {
+    color: gray;
+}
+
+ul, dl {
+    float:right;
+    vertical-align: right;
+    text-align: right;
+    list-style-type: none;
+}
+
+img, object, video, iframe, canvas {
+    padding: 2pt;
+    border: #888 1px dashed;
+    vertical-align: middle;
+}
+
+/* Index and stuff page */
+ul.index, dl.about ul {
+    margin-right: 10pt;
+}
+
+ul.stuff {
+    padding-bottom: 30px;
+}
+
+ul.stuff li, ul.index li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul.stuff li {
+    height: 106px;
+}
+
+.stuff p {
+    margin: 0;
+}
+
+.stuff img {
+    margin-left: 10px;
+    float: right;
+}
+
+/* Centering stuff */
+#floater {
+	position:relative; float:left;
+	height:50%;	margin-bottom:-200px;
+	width:1px;
+}
+
+#centered {
+	position:relative; clear:left;
+	height: 400px; width:400px;
+	margin:0 auto;
+}
+
+/* About page */
+.about img {
+    margin-bottom: 10pt;
+}
+
+.about dt {
+    text-align: left;
+    font-weight: bold;
+    clear:both;
+}
+
+.about dd {
+    text-align:right;
+}
+
+
