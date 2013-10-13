@@ -7,3 +7,9 @@
 [submodule "stuff/junat-taulukossa"]
 	path = stuff/junat-taulukossa
 	url = https://github.com/aeirola/junat-taulukossa.git
+[submodule "stuff/cv"]
+	path = stuff/cv
+	url = https://github.com/aeirola/cv.git
+[submodule "stuff/A!/aalto-logo"]
+	path = stuff/A!/aalto-logo
+	url = https://github.com/aeirola/aalto-logo.git

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- SVG tag, width and height specify the size of the image, viewBox crops the image nicely -->
+<svg width="100" height="100" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>
+		Rollin' Pacman.
+	</title>
+	<desc>
+		Created by Axel Eirola and Jesse Leskinen using Inkscape and notepad++.
+		Utilizes SMIL animation attributes integrated to SVG to accomplish interaction and animation.
+		
+		Best viewed with Opera 9.26 or higher, you could also try Batik Squiggle SVG viewer but not properly tested on it.
+	</desc>
+	
+	<!-- Defaults -->
+	<defs>
+		
+		<!-- Gradient for sky with animations for transitions between day and night -->
+		<linearGradient id="sky-gradient" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+			<stop stop-color="lightblue" offset="0">
+				<animate attributeName='stop-color' from="lightblue" to="black" dur="1s" fill="freeze" begin="sun.click" />
+				<animate attributeName='stop-color' from="black" to="lightblue" dur="1s" fill="freeze" begin="moon.click" />
+			</stop>
+		
+			<stop stop-color="white" offset="1">
+				<animate attributeName='stop-color' from="white" to="darkorange" dur="0.5s" fill="freeze" begin="sun.click" />
+				<animate attributeName='stop-color' from="darkorange" to="darkblue" dur="0.5s" fill="freeze" begin="sun.click + 0.5s" />
+				
+				<animate attributeName='stop-color' from="darkblue" to="orange" dur="0.5s" fill="freeze" begin="moon.click" />
+				<animate attributeName='stop-color' from="orange" to="white" dur="0.5s" fill="freeze" begin="moon.click + 0.5s" />
+			</stop>
+		
+		</linearGradient>
+		
+		
+		<!-- A gaussian blur for the sun -->
+		<filter id='Sun_blur'>
+			<feGaussianBlur stdDeviation='4'/>
+		</filter>
+		
+		<!-- Cloud path. I know, the amount of point is a bit excessive. -->
+		<path d='M 17.725107,-28.956097 C 17.845247,-28.993417 18.248327,-29.317157 18.431897,-29.561917 
+			C 19.178697,-30.611287 21.243977,-30.392457 22.723167,-30.975517 C 23.316397,-31.357917 23.570517,-31.506297 24.136757,-31.025997 
+			C 25.540517,-29.958627 27.765097,-29.769017 29.488217,-29.713377 C 30.019747,-29.788027 30.472317,-29.478937 31.002787,-29.460947 
+			C 32.871577,-29.279097 34.007607,-30.598237 35.092107,-31.934737 C 37.308347,-34.170087 40.473517,-34.672987 43.270757,-35.822117 
+			C 44.299587,-36.370097 44.693497,-37.543187 44.987257,-38.598817 C 45.039077,-39.122367 45.121577,-39.630297 45.340657,-40.113387 
+			C 45.480627,-40.575707 45.520077,-41.169547 45.340657,-41.627947 C 45.132377,-42.164137 44.465667,-42.256897 44.280467,-42.789117 
+			C 44.211087,-43.397197 43.893057,-43.787517 43.472697,-44.202707 C 43.060647,-44.587717 42.531347,-44.833597 42.160077,-45.262907 
+			C 42.011917,-45.460437 41.964167,-45.794087 41.907647,-46.020187 C 41.745707,-46.631747 41.228787,-46.981867 40.746477,-47.332807 
+			C 40.545287,-47.483707 40.336307,-47.541037 40.140657,-47.736687 C 38.989377,-48.985877 37.163427,-49.007147 35.596957,-49.301737 
+			C 35.494767,-49.352837 35.349797,-49.947537 35.294047,-50.059027 C 34.644927,-50.303487 34.460467,-50.685277 34.082397,-51.220187 
+			C 33.448917,-51.722317 32.554107,-51.527107 31.810547,-51.775527 C 31.495007,-51.933297 31.308157,-51.835837 31.406667,-52.229897 
+			C 31.603347,-53.131457 31.229707,-53.843517 30.699867,-54.552227 C 30.325537,-55.093467 29.846797,-55.294057 29.235797,-55.410487 
+			C 28.397287,-55.460887 27.652897,-55.518527 26.963947,-55.006597 C 26.479277,-54.743757 26.172407,-54.330547 25.853267,-53.895917 
+			C 25.261657,-52.913457 24.736467,-52.041177 23.732877,-51.422127 C 23.715617,-51.409187 23.056007,-51.654457 22.975597,-51.674557 
+			C 22.682347,-51.747867 22.423507,-51.378147 22.319287,-51.169707 C 22.070817,-50.621097 21.622107,-50.740247 21.208597,-50.159997 
+			C 21.013147,-49.899387 20.905687,-49.742857 20.905687,-49.402707 C 20.905687,-49.396407 20.035587,-49.762037 19.946467,-49.806597 
+			C 18.978027,-50.200687 17.963807,-50.706577 16.917337,-50.361937 C 16.150397,-49.841657 15.800517,-48.909677 15.251317,-48.191057 
+			C 15.048237,-47.987987 14.783267,-47.837667 14.494037,-47.837667 C 13.735067,-47.506507 14.470027,-47.239647 13.534807,-46.928927 
+			C 13.008167,-46.670077 12.779067,-46.102097 12.626067,-45.565817 C 12.234227,-45.147227 11.567427,-45.128887 11.061018,-44.758047 
+			C 10.477868,-44.425097 10.436088,-43.711187 10.051318,-43.243487 C 9.5328375,-43.181837 9.0080375,-43.293757 8.4862675,-43.192997 
+			C 7.8439375,-43.087717 7.3703475,-42.732047 6.9212175,-42.284257 C 6.7062375,-42.069287 6.6398175,-41.771947 6.5173275,-41.526977 
+			C 6.4077675,-41.307847 6.4260275,-41.010317 6.3658775,-40.769697 C 6.3170975,-40.574597 5.9349675,-40.412747 5.8105375,-40.163867 
+			C 5.6620775,-39.866957 5.5270275,-39.790077 5.2047075,-39.709497 C 4.8645775,-39.624467 4.7398375,-39.486567 4.5988775,-39.204647 
+			C 4.1605375,-38.936037 3.7972175,-38.960357 3.3132975,-38.726827 C 3.0914975,-38.615927 3.0214875,-38.095057 2.9833475,-37.942507 
+			C 2.1348576,-37.416417 1.4649476,-37.003117 1.2163576,-35.973577 C 1.2049376,-35.084047 1.6945576,-34.060527 2.3775176,-33.499787 
+			C 2.9273875,-32.619477 4.2423675,-33.662607 4.7503375,-33.095907 C 5.3386075,-31.989937 5.5718075,-32.067817 6.6687875,-31.934737 
+			C 7.3319275,-31.342337 8.0666675,-31.122457 8.8901475,-30.874547 C 9.6771275,-30.699567 10.421228,-30.732217 11.161998,-30.369687 
+			C 12.962607,-28.779857 14.447207,-28.225137 16.917337,-28.350267 C 17.324117,-28.451857 17.982127,-28.402637 17.725107,-28.956097 z'
+		id='cloud_path' fill='white' >
+		</path>
+		
+		<!-- A lighting filter and gaussian blur combined for the cloud.
+			The code for the lightning was shamelessly copypasted from http://www.svgbasics.com/filters2.html -->
+		<filter id='Cloud_filter'>
+			<!-- Create soft alphamask of cloud in SoftCloud -->
+			<feGaussianBlur result="SoftCloud" in="SourceGraphic" stdDeviation='5'/>
+			<!-- Create lightmap from SoftCloud alphamap and-->
+			<feDiffuseLighting result="diffOut" in="SoftCloud" diffuseConstant="1" surfaceScale="2" lighting-color="white">
+				<fePointLight x="80" y="10" z="90">
+					<!-- fePointLight position is relative to the startingposition of the cloud (105,65) 
+						so we have to animate the x-axis position of the PointLight relative to the movement (-160,0) of the cloud
+						Unfortunately Batik ver 1.7 does not yet implement the animation of fePointLight-->
+					<animate attributeName="x" from="80" to="240" dur="30s" repeatCount="indefinite"/>
+				</fePointLight>
+				<!-- Animations for changing cloud color between day and night. 
+					Notice the begin attribute and its syntax, sun and moon are the id's of the circle objects. 
+					Remember the fill="freeze" attribute so that the animations result stays. 
+					NOTE! These animations do not work on Squiggle SVG viewer, for some reason it does not think diffuseConstant is animateable 
+					although according to the SVG 1.1 it is -->
+				
+				<!-- Can be commented out without signifigant reducution of visual satisfaction for the sake of compatibility -->
+				<animate attributeName='diffuseConstant' from="1" to="0.7" dur="1s" fill="freeze" begin="sun.click" />
+				<animate attributeName='diffuseConstant' from="0.7" to="1" dur="1s" fill="freeze" begin="moon.click" />
+				<!-- -->
+
+			</feDiffuseLighting>
+			
+			<!-- Composite together Lightmap and Source Graphic -->
+			<feComposite result="ShadedCloud" in="SourceGraphic" in2="diffOut" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+			<!-- in feComposite k1 is mix of shadowmap and original; k3 is the orignial  -->
+			
+			<!-- Blur result into nice fluffy cloud -->
+			<feGaussianBlur in="ShadedCloud" stdDeviation='2'/>
+		</filter>
+		
+		
+		<!-- Grass path for later use, drawn in incscape and copypasted here.
+			The length of oune gras path is 40px. -->
+		<path d="M 41.013765,104.21585 C 41.013765,95.678402 41.019476,93.482277 41.019476,91.670921 
+			C 38.500223,92.631133 36.281967,91.495827 37.570597,88.624829 C 37.627817,88.281529 38.970527,84.941928 37.688897,85.253429 
+			C 32.704837,89.206128 32.865447,89.395227 29.112617,93.534028 C 26.718927,95.140527 26.510157,92.984928 26.510157,92.055327 
+			C 26.510157,89.902628 27.208437,87.981328 28.047977,86.022328 C 28.829407,84.199029 28.623707,84.710029 27.279067,85.785829 
+			C 24.045667,89.194128 22.802497,91.611827 20.004027,94.066327 C 18.155707,95.023728 17.519867,93.379827 17.519867,92.705927 
+			C 17.519867,91.961428 18.781357,89.388327 16.750957,91.641327 C 12.870447,95.507128 13.007277,93.216128 12.788127,89.748628 
+			C 12.846217,88.215028 14.824587,85.887128 13.911917,86.495528 C 11.477427,88.243029 9.198897,90.153727 7.287487,92.469327 
+			C 6.695307,93.209628 6.267547,92.175028 6.104547,91.523028 C 5.362297,88.041728 6.028777,85.875329 7.405777,82.828428 
+			C 8.732277,81.020429 11.359327,77.902628 7.997237,79.871129 C 1.263578,84.462128 3.240439,87.48484 0,91.787339 
+			C 0,95.659669 0.012438,97.909173 0.012438,104.2364"
+		id="grass_path" fill='green'>
+			
+			<!-- Animations for changing grass color between day and night. -->
+			<animate attributeName='fill' from="green" to="black" dur="1s" fill="freeze" begin="sun.click" />
+			<animate attributeName='fill' from="black" to="green" dur="1s" fill="freeze" begin="moon.click" />
+		</path>
+	   
+	   <!-- Motion blur filter for grass -->
+		<filter id="Grass_blur">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="2 1"/>
+		</filter>
+		
+	</defs>
+	
+	<!-- Background sky during day -->
+	<rect id="sky" x='0' y='0' width="100" height="100" fill="url(#sky-gradient)" opacity="1" />	
+	
+	<g  opacity="0">	<!-- Starfield -->
+		<circle cx='20' cy='3' r='1' fill='white'/>
+		<circle cx='35' cy='7' r='1' fill='white'/>
+		<circle cx='42' cy='36' r='1' fill='white'/>
+		<circle cx='54' cy='25' r='1' fill='white'/>
+		<circle cx='61' cy='29' r='1' fill='white'/>
+		<circle cx='18' cy='28' r='1' fill='white'/>
+		<circle cx='21' cy='17' r='1' fill='white'/>
+		<circle cx='12' cy='5' r='1' fill='white'/>
+		<circle cx='6' cy='9' r='1' fill='white'/>
+		
+		<!-- Animations for changing star opacity between day and night. -->
+		<animate attributeName='opacity' from="0" to="1" dur="1s" fill="freeze" begin="sun.click" />
+		<animate attributeName='opacity' from="1" to="0" dur="1s" fill="freeze" begin="moon.click" />
+	</g>
+	
+		
+	<g filter='url(#Sun_blur)'>	<!-- Happy yellow sun -->
+		<circle id='sun' cx='80' cy='17' r='15' fill='yellow'>
+			<!-- The animations for moving sun up and down at dusk and dawn. -->
+			<animate attributeName="cy" fill="freeze" from="17" to="117" dur="1s" begin="click"/>
+			<animate attributeName="cy" fill="freeze" from="117" to="17" dur="1s" begin="moon.click"/>
+		</circle>
+		
+		<!-- Happy white moon -->
+		<circle id='moon' cx='80' cy='117' r='15' fill='white'>
+			<animate attributeName="cy" fill="freeze" from="17" to="117" dur="1s" begin="click"/>
+			<animate attributeName="cy" fill="freeze" from="117" to="17" dur="1s" begin="sun.click"/>
+		</circle>
+		
+		
+	</g>
+	
+	<!-- Cloud -->
+	<g filter='url(#Cloud_filter)'>
+		<!-- Us the cloudpath set in the defaults above, notice the transform that moves it to the appropriate position. -->
+		<use transform='translate(105,65)' xlink:href='#cloud_path'/>
+		
+		<!-- The animation that moves the cloud over the sky -->
+		<animateTransform attributeName="transform" type="translate" by="-160" dur="30s" repeatCount="indefinite"/>
+	</g>
+	
+	<!-- Red ball bite -->
+	<g>
+		<circle cx="105" cy="75" r="4" fill="red"/>
+		
+		<!-- Finely tuned animation that precisely hits pacman in the mouth. 
+			The red ball should have a speed of about 62 px/s so that it matches the rotation speed of pac-->
+		<animateMotion dur="2s" path='M 0,0 L -62,0' calcMode="linear" begin="0.25s" repeatCount="indefinite"
+				keyTimes="0; 0.50; 1; 1" keyPoints="0; 0; 1; 1"/>
+				<!-- The tuning is done with the three attributes keyTime, keyPoints and begin
+					keyTimes is a set of times at wich the animation passes the corresponding keyPoints -->
+	</g>
+	
+	<!-- Tag g starts a new group, with groups we can easly transform (move, rotate, scale) 
+	all elements in group at once. The transform in the tag moves the whole group to the specified 
+	coordinates x=50, y=78-->
+	<g id='pacman' transform='translate(50,78)'>	<!-- The pacman character -->
+		<g id='pacman_trans_group'>
+			<!-- a pacman path with center at origo, moved to right place by group transforms-->
+			<g id='pacman_rot_group'>
+			
+				<!-- The path that is the body -->
+				<path id="pacman_path" d="M -0.89343342,-0.54074491 C -0.63759146,-0.81642653 15.54872,-12.557467 15.434277,-12.709637 
+					C 14.372276,-14.121738 8.4994848,-20.053823 0.078872559,-20.053823 C -10.615214,-20.053823 -20.037692,-11.060024 -20.037692,-0.646 
+					C -20.037692,12.967937 -9.4267592,20.029588 -0.059710612,20.029588 C 10.100134,20.029588 15.658138,12.469433 15.605468,12.385436 
+					C 15.268922,11.848696 -0.31766759,-0.008343847 -0.89343342,-0.54074491 z "
+					fill='yellow' stroke='black'/>
+				<!-- another circle that is the eye of the pacman, notice the specified coordinates-->
+				<circle cx="0" cy="-11" r="4" fill="black"/>
+			
+				<!-- The animation that rotates pacman, the rotation rotates around origo of the group 
+					PacMan has a speed of about 62px/s (40px*pi/2s
+					This animation element is given an ID so that other elemnts can be nicely synced with this one with begin="pacman_rot_anim.repeatEvent"-->
+				<animateTransform id="pacman_rot_anim" attributeName="transform" type="rotate" repeatCount="indefinite" dur="2s" by="360"/>
+			
+			</g>
+			
+			<!-- Translation animation to "bump" pac when mouth hits ground -->
+			<animateMotion dur="2s" path='M 0,0 L 0,4 L 0,0' calcMode="linear" begin="0s" repeatCount="indefinite" 
+				keyTimes="0; 0.15; 0.25; 0.35; 1" keyPoints="0; 0; 0.5; 1; 1"/>
+			
+		</g>
+		
+	</g>
+	
+	<!-- TextBubble for pacman -->
+	<g id='textBubble' visibility="hidden" >
+		<path d="M 59.798516,50.587087 C 59.798516,45.102225 68.986898,41.363355 78.185268,41.363355 
+			C 87.282666,41.363355 98.39049,44.663956 98.39049,50.01772 
+			C 98.39049,53.55513 91.521111,59.013706 78.690398,59.013706 
+			C 70.198796,59.013706 67.781398,56.966077 67.173423,57.761102 
+			C 64.607763,61.116101 62.223143,63.568637 62.223143,63.568637 
+			C 62.761949,61.025467 63.200528,58.599773 63.839561,55.939131 
+			C 63.55814,54.640387 59.798516,53.98011 59.798516,50.587087 z "
+			fill='white' stroke='black'/>
+		
+		<text x='68' y='54' font-family="Verdana" font-size="9" fill="black">
+			Hello!
+			
+		</text>
+		
+		<animateMotion dur="8s" path='M 1.3923341,2.0897734 C 1.3305039,3.258288 4.183604,3.008734 3.7526275,4.2799052 
+			C 3.2348554,5.8070812 1.7902363,5.1938012 1.2875335,3.8587558 
+			C 1.1603023,2.5689276 3.3449378,2.993042 3.7526275,1.7530097 
+			C 3.788768,1.1064876 1.4554743,0.89650264 1.3923341,2.0897734' 
+			calcMode="linear" repeatCount='indefinite' />
+			
+			
+		<set attributeName="visibility" to="visible" begin="pacman.mouseover" />
+		<set attributeName="visibility" to="hidden" begin="pacman.mouseout" />
+			
+	</g>
+	
+	<g id='grass_group' filter='url(#Grass_blur)'>	<!-- Grass group -->
+		
+		<!-- The grass consists of six instances of the grasspath described above put in a line-->
+		<use transform='translate(0,0)' xlink:href='#grass_path'/>
+		<use transform='translate(40,0)' xlink:href='#grass_path'/>
+		<use transform='translate(80,0)' xlink:href='#grass_path'/>
+		<use transform='translate(120,0)' xlink:href='#grass_path'/>
+	   
+	   <!-- The transformation that changes the translation (movement) by -100, that is to the left
+		during a time of 5sec, notice that we repead indefenitely so that we don't run out of grass.-->
+	   <animateTransform attributeName="transform" type="translate" by="-40" dur="0.4s" repeatCount="indefinite"/>
+	</g>	
+</svg>
