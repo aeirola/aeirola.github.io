@@ -1,4 +1,4 @@
 aeirola.github.io
 =================
 
-Personal website
+Personal website, available at http://aeirola.github.io
