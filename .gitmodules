@@ -16,3 +16,6 @@
 [submodule "stuff/kimppis"]
 	path = stuff/kimppis
 	url = https://github.com/aeirola/kimppis.git
+[submodule "stuff/irssi-remote-client"]
+	path = stuff/irssi-remote-client
+	url = https://github.com/aeirola/irssi-remote-client.git
