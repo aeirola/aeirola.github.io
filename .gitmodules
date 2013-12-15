@@ -19,3 +19,6 @@
 [submodule "stuff/irssi-remote-client"]
 	path = stuff/irssi-remote-client
 	url = https://github.com/aeirola/irssi-remote-client.git
+[submodule "stuff/christmas-cards"]
+	path = stuff/christmas-cards
+	url = https://github.com/aeirola/christmas-cards.git
