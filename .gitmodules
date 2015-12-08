@@ -22,3 +22,6 @@
 [submodule "stuff/christmas-cards"]
 	path = stuff/christmas-cards
 	url = https://github.com/aeirola/christmas-cards.git
+[submodule "stuff/steam-game-matcher"]
+	path = stuff/steam-game-matcher
+	url = https://github.com/aeirola/steam-game-matcher.git
