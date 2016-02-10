@@ -1,27 +1,9 @@
-[submodule "stuff/hict-timer"]
-	path = stuff/hict-timer
-	url = https://github.com/aeirola/hict-timer.git
-[submodule "stuff/irssi-rest-api"]
-	path = stuff/irssi-rest-api
-	url = https://github.com/aeirola/irssi-rest-api.git
-[submodule "stuff/junat-taulukossa"]
-	path = stuff/junat-taulukossa
-	url = https://github.com/aeirola/junat-taulukossa.git
 [submodule "stuff/cv"]
 	path = stuff/cv
 	url = https://github.com/aeirola/cv.git
 [submodule "stuff/A!/aalto-logo"]
 	path = stuff/A!/aalto-logo
 	url = https://github.com/aeirola/aalto-logo.git
-[submodule "stuff/kimppis"]
-	path = stuff/kimppis
-	url = https://github.com/aeirola/kimppis.git
 [submodule "stuff/irssi-remote-client"]
 	path = stuff/irssi-remote-client
 	url = https://github.com/aeirola/irssi-remote-client.git
-[submodule "stuff/christmas-cards"]
-	path = stuff/christmas-cards
-	url = https://github.com/aeirola/christmas-cards.git
-[submodule "stuff/steam-game-matcher"]
-	path = stuff/steam-game-matcher
-	url = https://github.com/aeirola/steam-game-matcher.git
