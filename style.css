@@ -6,6 +6,7 @@ body {
     background: black;
     width: 100%;
     margin: 0;
+    padding: 10px 5px;
 }
 body.right {
     width: 80%;
@@ -20,19 +21,18 @@ body.center {
 
 /* General stuff */
 h1 {
-    font-family: arial, verdana, sans-serif; 
+    font-family: arial, verdana, sans-serif;
     font-size: 48pt;
     color: gray;
-    letter-spacing: 3px;
+    letter-spacing: 0.05em;
     text-align: right;
     float: right;
 
-    border-bottom: gray 2px solid; 
+    border-bottom: gray 2px solid;
     padding: 0;
     margin-left: 40%;
     margin-top: 30%;
     margin-bottom: 10pt;
-    width: 60%;
     line-height: 45pt;
 }
 
@@ -64,6 +64,22 @@ ul, dl {
     list-style-type: none;
 }
 
+dl > dt {
+    text-align: left;
+    font-weight: bold;
+    clear:both;
+}
+
+dl > dd {
+    text-align:right;
+}
+
+dl > dd img {
+    margin-bottom: 10pt;
+}
+
+
+
 img, object, video, iframe, canvas {
     padding: 2pt;
     border: #888 1px dashed;
@@ -85,7 +101,7 @@ ul.stuff li, ul.index li {
 }
 
 ul.stuff li {
-    height: 106px;
+    min-height: 107px;
 }
 
 .stuff p {
@@ -110,19 +126,14 @@ ul.stuff li {
 	margin:0 auto;
 }
 
-/* About page */
-.about img {
-    margin-bottom: 10pt;
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  body.right {
+      width: 90%;
+  }
+
+  h1 {
+    font-size: 36pt;
+  }
 }
-
-.about dt {
-    text-align: left;
-    font-weight: bold;
-    clear:both;
-}
-
-.about dd {
-    text-align:right;
-}
-
-
