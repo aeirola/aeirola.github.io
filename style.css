@@ -12,6 +12,10 @@ body.right {
     width: 80%;
     text-align: right;
 }
+body.right > * {
+  float: right;
+  clear: both;
+}
 body.center {
     width: 100%;
     text-align: center;
