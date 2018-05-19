@@ -4,9 +4,9 @@ rvm: 2.1
 script: bundle exec jekyll build
 deploy:
   provider: s3
-  access_key_id: AKIAITHX5RL7YGH4PKTQ
+  access_key_id: AKIAIIIXJ2AYQWN6X35Q
   secret_access_key:
-    secure: W9hILloeyHDtsDJZtpdGerJY0PMexLPMK6muR3rWpz7jWqCiwQG8XnRykhH32rZEu3Exuxc9YS4gc4D7B+mSZXSoOc16cMaelu/GRytdaFvYxQCsa6qWjsLfxoIm2Kkksl+CF3DDs7EhUyOznuBTbSdt+OF9Yr0K0BNuVfLlbQA=
+    secure: lsWTB8gGDUxE3Qj+4nvDYrRqBnz7gWPNdM0O6AUPk0BTJJz9z4YGFBaX8Yv5OEZKLQBVVruBc1QjtlLJHt4Q9UUlKYinPd0x2GesbfA3H2JO3wGg5cHo66oDCqk8aqJ1BZFppx5eG/2uAA6OvfVVRPQe+vufQI2UkGQpiyE8Y40=
   local_dir: _site
   bucket: aeirola.iki.fi
   region: eu-central-1
