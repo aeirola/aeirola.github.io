@@ -3,7 +3,7 @@ html {margin:0; padding:0;
     height:100%;
 }
 body {
-    background: black;
+    background: #f3f2f1;
     width: 100%;
     margin: 0;
     padding: 10px 5px;
@@ -27,12 +27,12 @@ body.center {
 h1 {
     font-family: arial, verdana, sans-serif;
     font-size: 48pt;
-    color: gray;
+    color: #cca358;
     letter-spacing: 0.05em;
     text-align: right;
     float: right;
 
-    border-bottom: gray 2px solid;
+    border-bottom: #cca358 2px solid;
     padding: 0;
     margin-left: 40%;
     margin-top: 30%;
@@ -40,15 +40,19 @@ h1 {
     line-height: 45pt;
 }
 
+h1 .secondary {
+    color: #696766;
+}
+
 
 p, a, ul, dl {
     font-family: arial, verdana, sans-serif;
-    color: #FFF;
+    color: #696766;
 }
 
 a {
     text-decoration: none;
-    color: purple;
+    color: #cca358;
 }
 
 p.back, p.back a {
@@ -58,7 +62,7 @@ p.back, p.back a {
 }
 
 p.back {
-    color: gray;
+    color: #696766;
 }
 
 ul, dl {
@@ -86,7 +90,7 @@ dl > dd img {
 
 img, object, video, iframe, canvas {
     padding: 2pt;
-    border: #888 1px dashed;
+    border: #7e7b79 1px dashed;
     vertical-align: middle;
 }
 
