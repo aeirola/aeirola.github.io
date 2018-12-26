@@ -16,42 +16,42 @@ title: about.html
   </h1>
   <p class="back"><a href="./">Back</a></p>
 
-  <dl class="about" itemscope itemtype="http://data-vocabulary.org/Person">
+  <dl class="about" itemscope itemtype="http://schema.org/Person">
   <dt></dt>
-  <dd><img itemprop="photo" width="200" height="200"
+  <dd><img itemprop="image" width="200" height="200"
            src="stuff/images/me.jpg" alt="Picture of me.">
   </dd>
 
     <dt>Name:</dt>
-    <dd itemprop="name">Axel Havukangas, née Eirola</dd>
+    <dd><span itemprop="giveName">Axel</span> <span itemprop="familyName">Havukangas</span>, née <span itemprop="additionalName">Eirola</span></dd>
 
     <dt>Occupation:</dt>
     <dd>
-      <span itemprop="role">Software developer</span> at
-      <span itemprop="affiliation">Futurice</span>
+      <span itemprop="jobTitle">Software developer</span> at
+      <span itemprop="worksFor">Futurice</span>
     </dd>
 
 	<dt>Education:</dt>
 	<dd>
         Master of Science in Computer Science</br>
-        at <span itemprop="affiliation">Aalto University School of Science</span><br/>
+        at <span itemprop="alumniOf">Aalto University School of Science</span><br/>
 	</dd>
 
     <dt>Born:</dt>
-    <dd><time datetime="1986-08-11">11 August 1986</time></dd>
+    <dd ><time itemprop="birthDate" datetime="1986-08-11">11 August 1986</time></dd>
 
     <dt>Address:</dt>
     <dd itemprop="address" itemscope
-          itemtype="http://data-vocabulary.org/Address">
-      <span itemprop="locality">Hämeenlinna</span>
-      <span itemprop="country-name">Finland</span>
+          itemtype="http://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Hämeenlinna</span>
+      <span itemprop="addressCountry">Finland</span>
     </dd>
 
     <dt>Phone:</dt>
-    <dd>040-7265959</dd>
+    <dd itemprop="telephone">040-7265959</dd>
 
     <dt>Email:</dt>
-    <dd><em>first</em>@<em>last</em>.fi</dd>
+    <dd itemprop="email"><em>first</em>@<em>last</em>.fi</dd>
 
     <dt>IRC:</dt>
     <dd>Spaceball @ IRCnet</dd>
