@@ -1,0 +1,4 @@
+url: "https://axel.havukangas.fi"
+plugins:
+  - jekyll-sitemap
+  - jekyll-last-modified-at
