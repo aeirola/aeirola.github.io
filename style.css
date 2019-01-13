@@ -75,6 +75,19 @@ a {
     color: #cca358;
 }
 
+@media (pointer: coarse) {
+    a:not(.image) {
+        display: inline-block;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        font-weight: bold;
+        background-color: #cca358;
+        color: #f3f2f1;
+    }
+}
+
 p.back {
     font-size: 10pt;
     margin-bottom: 5;
