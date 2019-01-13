@@ -16,5 +16,6 @@ deploy:
   region: eu-central-1
   skip_cleanup: true
   acl: public_read
+  cache_control: "max-age=600"
   on:
     repo: aeirola/aeirola.iki.fi
