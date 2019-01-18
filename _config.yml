@@ -2,3 +2,12 @@ url: "https://axel.havukangas.fi"
 plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
+defaults:
+  - scope:
+      path: "**/*.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "stuff/irssi-remote-client/**/*"
+    values:
+      sitemap: false
