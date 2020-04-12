@@ -1,9 +1,3 @@
-[submodule "stuff/cv"]
-	path = stuff/cv
-	url = https://github.com/aeirola/cv.git
-[submodule "stuff/A!/aalto-logo"]
-	path = stuff/A!/aalto-logo
-	url = https://github.com/aeirola/aalto-logo.git
 [submodule "stuff/irssi-remote-client"]
 	path = stuff/irssi-remote-client
 	url = https://github.com/aeirola/irssi-remote-client.git
