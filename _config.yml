@@ -6,7 +6,3 @@ defaults:
       path: "**/*.pdf"
     values:
       sitemap: false
-  - scope:
-      path: "stuff/irssi-remote-client/**/*"
-    values:
-      sitemap: false
